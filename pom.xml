@@ -27,7 +27,7 @@
 
         <dependency>
             <groupId>cn.chenchongyang</groupId>
-            <artifactId>serveragent</artifactId>
+            <artifactId>serveragent-spring</artifactId>
             <version>1.0.0</version>
         </dependency>
 
@@ -43,6 +43,20 @@
                     <source>8</source>
                     <target>8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-source</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
